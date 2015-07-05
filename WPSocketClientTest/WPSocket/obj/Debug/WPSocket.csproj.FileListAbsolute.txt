@@ -1,0 +1,10 @@
+C:\dev\WPSocketServer\WPSocketServer\WPSocket\obj\Debug\WPSocket.csprojResolveAssemblyReference.cache
+C:\dev\WPSocketServer\WPSocketServer\WPSocket\bin\Debug\WPSocket.dll
+C:\dev\WPSocketServer\WPSocketServer\WPSocket\bin\Debug\WPSocket.pdb
+C:\dev\WPSocketServer\WPSocketServer\WPSocket\obj\Debug\WPSocket.dll
+C:\dev\WPSocketServer\WPSocketServer\WPSocket\obj\Debug\WPSocket.pdb
+C:\dev\WPSocketClientTest\WPSocket\bin\Debug\WPSocket.dll
+C:\dev\WPSocketClientTest\WPSocket\bin\Debug\WPSocket.pdb
+C:\dev\WPSocketClientTest\WPSocket\obj\Debug\WPSocket.csprojResolveAssemblyReference.cache
+C:\dev\WPSocketClientTest\WPSocket\obj\Debug\WPSocket.dll
+C:\dev\WPSocketClientTest\WPSocket\obj\Debug\WPSocket.pdb

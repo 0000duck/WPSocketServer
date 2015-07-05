@@ -1,0 +1,40 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPSocketServer", "WPSocketServer\WPSocketServer.csproj", "{98DA8918-B240-4EE3-9876-EEB43DE2142B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPSocket", "WPSocket\WPSocket.csproj", "{AC0DB9D0-AADA-4B7B-9C43-E04D46319145}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TeamNexgen.Data", "TeamNexgen.Data\TeamNexgen.Data.csproj", "{C50145E6-A244-4F1F-B41F-90D1925B4A00}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPSocketServer.Business", "WPSocketServer.Business\WPSocketServer.Business.csproj", "{C9E8555A-2AD7-439A-BB95-79A50E86BBF5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{98DA8918-B240-4EE3-9876-EEB43DE2142B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{98DA8918-B240-4EE3-9876-EEB43DE2142B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{98DA8918-B240-4EE3-9876-EEB43DE2142B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{98DA8918-B240-4EE3-9876-EEB43DE2142B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AC0DB9D0-AADA-4B7B-9C43-E04D46319145}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AC0DB9D0-AADA-4B7B-9C43-E04D46319145}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AC0DB9D0-AADA-4B7B-9C43-E04D46319145}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AC0DB9D0-AADA-4B7B-9C43-E04D46319145}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C50145E6-A244-4F1F-B41F-90D1925B4A00}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C50145E6-A244-4F1F-B41F-90D1925B4A00}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C50145E6-A244-4F1F-B41F-90D1925B4A00}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C50145E6-A244-4F1F-B41F-90D1925B4A00}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C9E8555A-2AD7-439A-BB95-79A50E86BBF5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C9E8555A-2AD7-439A-BB95-79A50E86BBF5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C9E8555A-2AD7-439A-BB95-79A50E86BBF5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C9E8555A-2AD7-439A-BB95-79A50E86BBF5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

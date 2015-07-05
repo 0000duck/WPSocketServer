@@ -1,0 +1,4 @@
+C:\dev\WPSocketServer\WPSocketServer\WPSocket\bin\Debug\WPSocket.dll
+C:\dev\WPSocketServer\WPSocketServer\WPSocket\bin\Debug\WPSocket.pdb
+C:\dev\WPSocketServer\WPSocketServer\WPSocket\obj\Debug\WPSocket.dll
+C:\dev\WPSocketServer\WPSocketServer\WPSocket\obj\Debug\WPSocket.pdb

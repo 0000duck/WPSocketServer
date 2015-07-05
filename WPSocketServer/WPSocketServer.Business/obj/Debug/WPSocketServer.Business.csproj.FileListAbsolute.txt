@@ -1,0 +1,11 @@
+C:\dev\WPSocketServer\WPSocketServer\WPSocketServer.Business\bin\Debug\WPSocketServer.Business.dll
+C:\dev\WPSocketServer\WPSocketServer\WPSocketServer.Business\bin\Debug\WPSocketServer.Business.pdb
+C:\dev\WPSocketServer\WPSocketServer\WPSocketServer.Business\bin\Debug\WPSocket.dll
+C:\dev\WPSocketServer\WPSocketServer\WPSocketServer.Business\bin\Debug\WPSocket.pdb
+C:\dev\WPSocketServer\WPSocketServer\WPSocketServer.Business\obj\Debug\WPSocketServer.Business.dll
+C:\dev\WPSocketServer\WPSocketServer\WPSocketServer.Business\obj\Debug\WPSocketServer.Business.pdb
+C:\dev\WPSocketServer\WPSocketServer\WPSocketServer.Business\obj\Debug\WPSocketServer.Business.csprojResolveAssemblyReference.cache
+C:\dev\WPSocketServer\WPSocketServer\WPSocketServer.Business\bin\Debug\TeamNexgen.Data.dll
+C:\dev\WPSocketServer\WPSocketServer\WPSocketServer.Business\bin\Debug\Telerik.OpenAccess.35.Extensions.dll
+C:\dev\WPSocketServer\WPSocketServer\WPSocketServer.Business\bin\Debug\TeamNexgen.Data.pdb
+C:\dev\WPSocketServer\WPSocketServer\WPSocketServer.Business\bin\Debug\Telerik.OpenAccess.35.Extensions.xml
