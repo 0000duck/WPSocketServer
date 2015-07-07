@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-dark.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
+
+    <title>WP Socket Server by guideX</title>
+  </head>
+
+  <body>
+
+    <header>
+      <div class="container">
+        <h1>WP Socket Server</h1>
+        <h2>A free unlimited managed socket server</h2>
+
+        <section id="downloads">
+          <a href="https://github.com/guideX/WPSocketServer/zipball/master" class="btn">Download as .zip</a>
+          <a href="https://github.com/guideX/WPSocketServer/tarball/master" class="btn">Download as .tar.gz</a>
+          <a href="https://github.com/guideX/WPSocketServer" class="btn btn-github"><span class="icon"></span>View on GitHub</a>
+        </section>
+      </div>
+    </header>
+
+    <div class="container">
+      <section id="main_content">
+        <h3>
+<a id="wp-socket-server" class="anchor" href="#wp-socket-server" aria-hidden="true"><span class="octicon octicon-link"></span></a>WP SOCKET SERVER</h3>
+
+<p>These are the commands to access the WP Socket Server</p>
+
+<h2>
+<a id="auth" class="anchor" href="#auth" aria-hidden="true"><span class="octicon octicon-link"></span></a>auth</h2>
+
+<p>authenticates you with the service, without this, you cannot do much.<br>
+Inputs: emailAddress, password<br>
+Outputs:<br>
+msg:Authentication Success</p>
+
+<h2>
+<a id="list" class="anchor" href="#list" aria-hidden="true"><span class="octicon octicon-link"></span></a>list</h2>
+
+<p>shows your list of connections<br>
+Inputs: None<br>
+Outputs:<br>
+con:connection index;connected:description;server;port</p>
+
+<h2>
+<a id="monitor" class="anchor" href="#monitor" aria-hidden="true"><span class="octicon octicon-link"></span></a>monitor</h2>
+
+<p>monitor the connection of choice, automatically stop monitoring other connections<br>
+Inputs: connectionId<br>
+Outputs:<br>
+msg:Now monitoring 20</p>
+
+<h2>
+<a id="stopmonitoring" class="anchor" href="#stopmonitoring" aria-hidden="true"><span class="octicon octicon-link"></span></a>stopmonitoring</h2>
+
+<p>stop monitoring the connection<br>
+Inputs: connectionId<br>
+Outputs:<br>
+msg:Could not stop monitoring 20</p>
+
+<h2>
+<a id="create" class="anchor" href="#create" aria-hidden="true"><span class="octicon octicon-link"></span></a>create</h2>
+
+<p>create a connection<br>
+Inputs: server, port, serviceType<br>
+Outputs: <br>
+msg:Created 20<br></p>
+
+<h2>
+<a id="connect" class="anchor" href="#connect" aria-hidden="true"><span class="octicon octicon-link"></span></a>connect</h2>
+
+<p>connect a connection<br>
+Inputs: connectionId<br>
+Output: <br>
+msg:Connecting to 20<br></p>
+
+<h2>
+<a id="destroy" class="anchor" href="#destroy" aria-hidden="true"><span class="octicon octicon-link"></span></a>destroy</h2>
+
+<p>destroy a connection<br>
+Inputs: connectionId<br>
+Outputs: <br>
+msg:Destroyed 20<br></p>
+
+<h2>
+<a id="disconnect" class="anchor" href="#disconnect" aria-hidden="true"><span class="octicon octicon-link"></span></a>disconnect</h2>
+
+<p>disconnection a connection<br>
+Inputs: connectionId<br>
+Outputs: <br>
+msg:Disconnected from 20<br></p>
+      </section>
+    </div>
+
+    
+  </body>
+</html>
