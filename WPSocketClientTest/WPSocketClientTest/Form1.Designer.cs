@@ -48,6 +48,14 @@
             this.cmdDisconnect = new System.Windows.Forms.Button();
             this.cmdStopMonitoring = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
+            this.cmdRegister = new System.Windows.Forms.Button();
+            this.label7 = new System.Windows.Forms.Label();
+            this.txtEmail = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.txtPassword = new System.Windows.Forms.TextBox();
+            this.cmdEmailVerify = new System.Windows.Forms.Button();
+            this.label9 = new System.Windows.Forms.Label();
+            this.txtGuid = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label1
@@ -69,7 +77,7 @@
             // 
             // txtOutgoing
             // 
-            this.txtOutgoing.Location = new System.Drawing.Point(121, 288);
+            this.txtOutgoing.Location = new System.Drawing.Point(121, 296);
             this.txtOutgoing.Name = "txtOutgoing";
             this.txtOutgoing.Size = new System.Drawing.Size(115, 20);
             this.txtOutgoing.TabIndex = 2;
@@ -79,7 +87,7 @@
             this.txtIncoming.Location = new System.Drawing.Point(121, 119);
             this.txtIncoming.Multiline = true;
             this.txtIncoming.Name = "txtIncoming";
-            this.txtIncoming.Size = new System.Drawing.Size(196, 163);
+            this.txtIncoming.Size = new System.Drawing.Size(196, 171);
             this.txtIncoming.TabIndex = 3;
             // 
             // cmdConnect
@@ -95,7 +103,7 @@
             // cmdSend
             // 
             this.cmdSend.Enabled = false;
-            this.cmdSend.Location = new System.Drawing.Point(242, 288);
+            this.cmdSend.Location = new System.Drawing.Point(242, 296);
             this.cmdSend.Name = "cmdSend";
             this.cmdSend.Size = new System.Drawing.Size(75, 20);
             this.cmdSend.TabIndex = 5;
@@ -123,7 +131,7 @@
             // cmdAuth
             // 
             this.cmdAuth.Enabled = false;
-            this.cmdAuth.Location = new System.Drawing.Point(15, 119);
+            this.cmdAuth.Location = new System.Drawing.Point(572, 96);
             this.cmdAuth.Name = "cmdAuth";
             this.cmdAuth.Size = new System.Drawing.Size(100, 23);
             this.cmdAuth.TabIndex = 8;
@@ -175,7 +183,7 @@
             // cmdClose
             // 
             this.cmdClose.Enabled = false;
-            this.cmdClose.Location = new System.Drawing.Point(15, 148);
+            this.cmdClose.Location = new System.Drawing.Point(392, 293);
             this.cmdClose.Name = "cmdClose";
             this.cmdClose.Size = new System.Drawing.Size(100, 23);
             this.cmdClose.TabIndex = 13;
@@ -286,11 +294,90 @@
             this.label6.TabIndex = 25;
             this.label6.Text = "ConnectionId:";
             // 
+            // cmdRegister
+            // 
+            this.cmdRegister.Enabled = false;
+            this.cmdRegister.Location = new System.Drawing.Point(572, 67);
+            this.cmdRegister.Name = "cmdRegister";
+            this.cmdRegister.Size = new System.Drawing.Size(100, 23);
+            this.cmdRegister.TabIndex = 26;
+            this.cmdRegister.Text = "Register";
+            this.cmdRegister.UseVisualStyleBackColor = true;
+            this.cmdRegister.Click += new System.EventHandler(this.cmdRegister_Click);
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(503, 18);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(38, 13);
+            this.label7.TabIndex = 30;
+            this.label7.Text = "E-mail:";
+            // 
+            // txtEmail
+            // 
+            this.txtEmail.Location = new System.Drawing.Point(572, 15);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(100, 20);
+            this.txtEmail.TabIndex = 29;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(503, 44);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(56, 13);
+            this.label8.TabIndex = 28;
+            this.label8.Text = "Password:";
+            // 
+            // txtPassword
+            // 
+            this.txtPassword.Location = new System.Drawing.Point(572, 41);
+            this.txtPassword.Name = "txtPassword";
+            this.txtPassword.Size = new System.Drawing.Size(100, 20);
+            this.txtPassword.TabIndex = 27;
+            // 
+            // cmdEmailVerify
+            // 
+            this.cmdEmailVerify.Enabled = false;
+            this.cmdEmailVerify.Location = new System.Drawing.Point(572, 151);
+            this.cmdEmailVerify.Name = "cmdEmailVerify";
+            this.cmdEmailVerify.Size = new System.Drawing.Size(100, 23);
+            this.cmdEmailVerify.TabIndex = 31;
+            this.cmdEmailVerify.Text = "E-mail Verify";
+            this.cmdEmailVerify.UseVisualStyleBackColor = true;
+            this.cmdEmailVerify.Click += new System.EventHandler(this.cmdEmailVerify_Click);
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(503, 128);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(32, 13);
+            this.label9.TabIndex = 33;
+            this.label9.Text = "Guid:";
+            // 
+            // txtGuid
+            // 
+            this.txtGuid.Location = new System.Drawing.Point(572, 125);
+            this.txtGuid.Name = "txtGuid";
+            this.txtGuid.Size = new System.Drawing.Size(100, 20);
+            this.txtGuid.TabIndex = 32;
+            this.txtGuid.Text = "";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(509, 320);
+            this.ClientSize = new System.Drawing.Size(685, 327);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.txtGuid);
+            this.Controls.Add(this.cmdEmailVerify);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.txtEmail);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.txtPassword);
+            this.Controls.Add(this.cmdRegister);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.cmdStopMonitoring);
             this.Controls.Add(this.cmdDisconnect);
@@ -317,7 +404,7 @@
             this.Controls.Add(this.txtServer);
             this.Controls.Add(this.label1);
             this.Name = "Form1";
-            this.Text = "0";
+            this.Text = "WPSocketClientTest";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -351,6 +438,14 @@
         private System.Windows.Forms.Button cmdDisconnect;
         private System.Windows.Forms.Button cmdStopMonitoring;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Button cmdRegister;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox txtEmail;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TextBox txtPassword;
+        private System.Windows.Forms.Button cmdEmailVerify;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.TextBox txtGuid;
     }
 }
 

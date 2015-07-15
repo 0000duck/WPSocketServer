@@ -48,6 +48,8 @@ namespace WPSocketClientTest {
                             this.UIThread(() => cmdAuth.Enabled = false);
                             this.UIThread(() => cmd_Connect.Enabled = true);
                             this.UIThread(() => cmdStopMonitoring.Enabled = true);
+                            this.UIThread(() => cmdRegister.Enabled = false);
+                            this.UIThread(() => cmdEmailVerify.Enabled = false);
                             break;
                     }
                     break;
@@ -58,6 +60,8 @@ namespace WPSocketClientTest {
             this.UIThread(() => cmdConnect.Text = "Disconnect");
             this.UIThread(() => cmdClose.Enabled = true);
             this.UIThread(() => cmdAuth.Enabled = true);
+            this.UIThread(() => cmdRegister.Enabled = true);
+            this.UIThread(() => cmdEmailVerify.Enabled = true);
         }
 
         private void _socket_CouldNotConnect(string SocketID) {
@@ -81,7 +85,11 @@ namespace WPSocketClientTest {
 
         private void cmdAuth_Click(object sender, EventArgs e) {
             try {
-                _socket.Send("auth guide_X@live.com talaxian#1");
+                if (txtEmail.Text.Length != 0) {
+                    if (txtPassword.Text.Length != 0) {
+                        _socket.Send("auth " + txtEmail.Text + " " + txtPassword.Text);
+                    }
+                }
             } catch (Exception ex) {
                 throw ex;
             }
@@ -146,6 +154,8 @@ namespace WPSocketClientTest {
             this.UIThread(() => cmdAuth.Enabled = false);
             this.UIThread(() => cmdStopMonitoring.Enabled = false);
             this.UIThread(() => cmd_Connect.Enabled = false);
+            this.UIThread(() => cmdRegister.Enabled = false);
+            this.UIThread(() => cmdEmailVerify.Enabled = false);
             System.Threading.Thread.Sleep(200);
             _socket = new AsyncSocket();
             _socket.CouldNotConnect += _socket_CouldNotConnect;
@@ -156,6 +166,20 @@ namespace WPSocketClientTest {
 
         private void cmdStopMonitoring_Click(object sender, EventArgs e) {
             _socket.Send("stopmonitoring " + txtMonitorId.Text);
+        }
+
+        private void cmdRegister_Click(object sender, EventArgs e) {
+            if (txtEmail.Text.Length != 0) {
+                if (txtPassword.Text.Length != 0) {
+                    _socket.Send("register " + txtEmail.Text + " " + txtPassword.Text);
+                }
+            }
+        }
+
+        private void cmdEmailVerify_Click(object sender, EventArgs e) {
+            if (txtGuid.Text.Length != 0) {
+                _socket.Send("emailverify " + txtGuid.Text);
+            }
         }
     }
 }

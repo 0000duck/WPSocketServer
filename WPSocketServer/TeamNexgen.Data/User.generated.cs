@@ -127,6 +127,32 @@ namespace TeamNexgen.Data
 			}
 		}
 		
+		private bool _emailVerified;
+		public virtual bool EmailVerified
+		{
+			get
+			{
+				return this._emailVerified;
+			}
+			set
+			{
+				this._emailVerified = value;
+			}
+		}
+		
+		private string _registrationGuid;
+		public virtual string RegistrationGuid
+		{
+			get
+			{
+				return this._registrationGuid;
+			}
+			set
+			{
+				this._registrationGuid = value;
+			}
+		}
+		
 	}
 }
 #pragma warning restore 1591

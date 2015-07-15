@@ -36,19 +36,6 @@ namespace TeamNexgen.Data
 			}
 		}
 		
-		private string _description;
-		public virtual string Description
-		{
-			get
-			{
-				return this._description;
-			}
-			set
-			{
-				this._description = value;
-			}
-		}
-		
 		private string _name;
 		public virtual string Name
 		{
@@ -62,8 +49,8 @@ namespace TeamNexgen.Data
 			}
 		}
 		
-		private byte _isActive;
-		public virtual byte IsActive
+		private bool _isActive;
+		public virtual bool IsActive
 		{
 			get
 			{
@@ -85,6 +72,71 @@ namespace TeamNexgen.Data
 			set
 			{
 				this._url = value;
+			}
+		}
+		
+		private string _version;
+		public virtual string Version
+		{
+			get
+			{
+				return this._version;
+			}
+			set
+			{
+				this._version = value;
+			}
+		}
+		
+		private DateTime _timestamp;
+		public virtual DateTime Timestamp
+		{
+			get
+			{
+				return this._timestamp;
+			}
+			set
+			{
+				this._timestamp = value;
+			}
+		}
+		
+		private string _seoUrl;
+		public virtual string SeoUrl
+		{
+			get
+			{
+				return this._seoUrl;
+			}
+			set
+			{
+				this._seoUrl = value;
+			}
+		}
+		
+		private string _authorName;
+		public virtual string AuthorName
+		{
+			get
+			{
+				return this._authorName;
+			}
+			set
+			{
+				this._authorName = value;
+			}
+		}
+		
+		private string _authorEmail;
+		public virtual string AuthorEmail
+		{
+			get
+			{
+				return this._authorEmail;
+			}
+			set
+			{
+				this._authorEmail = value;
 			}
 		}
 		

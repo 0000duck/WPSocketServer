@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using WPSocketServer.Business.Enums;
 using WPSocketServer.Business.Helpers;
+using WPSocketServer.Business.Models;
 namespace WPSocketServer.Business.Objects {
     /// <summary>
     /// User Sockets
@@ -226,7 +227,7 @@ namespace WPSocketServer.Business.Objects {
         /// </summary>
         /// <param name="userId"></param>
         /// <returns></returns>
-        public int Create(string description, int userId, string serverIp, int port, int serviceType) {
+        public int Create(string description, int userId, string serverIp, int port, int serviceTypeId) {
             try {
                 var connectionId = ConnectionsHelper.Create(new Models.ConnectionModel() {
                     Connected = false,
@@ -235,7 +236,7 @@ namespace WPSocketServer.Business.Objects {
                     Port = port,
                     Server = serverIp,
                     UserId = userId,
-                    ServiceType = serviceType
+                    ServiceTypeId = serviceTypeId
                 });
                 var s = new UserSocket(userId, description, serverIp, port, connectionId);
                 _userSockets.Add(s);

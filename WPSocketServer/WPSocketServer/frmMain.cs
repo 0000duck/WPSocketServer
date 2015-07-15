@@ -45,10 +45,22 @@ namespace WPSocketServer {
                 throw ex;
             }
         }
-
         private void cmdStart_Click(object sender, EventArgs e) {
+            cmdShowUsers.Enabled = true;
+            cmdStop.Enabled = true;
+            cmdStart.Enabled = false;
+            lblStatus.Text = "Server Open";
             tmrUpdateUI.Start();
             GlobalObjects.EntryPoint();
+        }
+        private void cmdStop_Click(object sender, EventArgs e) {
+            cmdShowUsers.Enabled = false;
+            cmdStop.Enabled = false;
+            cmdStart.Enabled = true;
+            lblStatus.Text = "Server Closed";
+            tmrUpdateUI.Stop();
+            lblUsersOnlineCount.Text = "0";
+            lblUserSockets.Text = "0";
         }
     }
 }

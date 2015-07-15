@@ -84,6 +84,21 @@ namespace WPSocketServer.Business.Objects {
             }
         }
         /// <summary>
+        /// Close
+        /// </summary>
+        public void Close() {
+            try {
+                foreach (var user in _users) {
+                    user.CloseSocket();
+                }
+                _users = new List<UserObject>();
+                _server.Close();
+                _server = null;
+            } catch (Exception ex) {
+                throw ex;
+            }
+        }
+        /// <summary>
         /// Destroy
         /// </summary>
         /// <param name="obj"></param>

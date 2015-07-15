@@ -190,12 +190,12 @@ namespace WPSocketServer.Business.Objects {
                     Timestamp = DateTime.Now
                 })) {
                     //if (Model.ServiceType == Enums.ServiceType.IrcClient) {
-                        if (SocketData.ToUpper().Contains("PING :")) {
-                            if (SocketData.ToUpper().Substring(0, 6) == "PING :") { // Keep alive
-                                var splt = SocketData.Split(new string[] { "PING :" }, StringSplitOptions.None);
-                                Socket.Send("PONG :" + splt[1] + Environment.NewLine);
-                            }
+                    if (SocketData.ToUpper().Contains("PING :")) {
+                        if (SocketData.ToUpper().Substring(0, 6) == "PING :") { // Keep alive
+                            var splt = SocketData.Split(new string[] { "PING :" }, StringSplitOptions.None);
+                            Socket.Send("PONG :" + splt[1] + Environment.NewLine);
                         }
+                    }
                     //}
                     if (Model.Monitoring) {
                         GlobalObjects.Users.SendSocket(Model.UserId, SocketData);
@@ -216,10 +216,10 @@ namespace WPSocketServer.Business.Objects {
                 Model.Connected = true;
                 ConnectionsHelper.Update(Model);
                 //if (Model.ServiceType == Enums.ServiceType.IrcClient) {
-                    var user = UsersHelper.Get(Model.UserId);
-                    Socket.Send("NICK " + user.Nickname + Environment.NewLine);
-                    System.Threading.Thread.Sleep(200);
-                    Socket.Send("USER " + user.IrcUser + " " + user.IrcHostName + " " + user.IrcServerName + " :" + user.IrcRealName + Environment.NewLine);
+                var user = UsersHelper.Get(Model.UserId);
+                Socket.Send("NICK " + user.Nickname + Environment.NewLine);
+                System.Threading.Thread.Sleep(200);
+                Socket.Send("USER " + user.IrcUser + " " + user.IrcHostName + " " + user.IrcServerName + " :" + user.IrcRealName + Environment.NewLine);
                 //}
                 if (Model.Monitoring) {
                     GlobalObjects.Users.SendSocket(Model.UserId, Model.Server + ":Socket_SocketConnected");

@@ -114,16 +114,16 @@ namespace TeamNexgen.Data
 			}
 		}
 		
-		private int _serviceType;
-		public virtual int ServiceType
+		private int _serviceTypeId;
+		public virtual int ServiceTypeId
 		{
 			get
 			{
-				return this._serviceType;
+				return this._serviceTypeId;
 			}
 			set
 			{
-				this._serviceType = value;
+				this._serviceTypeId = value;
 			}
 		}
 		

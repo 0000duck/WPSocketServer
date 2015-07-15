@@ -49,8 +49,8 @@ namespace TeamNexgen.Data
 			}
 		}
 		
-		private byte _isActive;
-		public virtual byte IsActive
+		private bool _isActive;
+		public virtual bool IsActive
 		{
 			get
 			{
@@ -62,16 +62,16 @@ namespace TeamNexgen.Data
 			}
 		}
 		
-		private int _serviceType1;
-		public virtual int ServiceType1
+		private int _serviceTypeEnumId;
+		public virtual int ServiceTypeEnumId
 		{
 			get
 			{
-				return this._serviceType1;
+				return this._serviceTypeEnumId;
 			}
 			set
 			{
-				this._serviceType1 = value;
+				this._serviceTypeEnumId = value;
 			}
 		}
 		

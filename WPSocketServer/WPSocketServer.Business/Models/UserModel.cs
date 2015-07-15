@@ -37,5 +37,13 @@ namespace WPSocketServer.Business.Models {
         /// Nickname
         /// </summary>
         public string Nickname { get; set; }
+        /// <summary>
+        /// Email Verified
+        /// </summary>
+        public bool EmailVerified { get; set; }
+        /// <summary>
+        /// Registration Guid
+        /// </summary>
+        public string RegistrationGuid { get; set; }
     }
 }

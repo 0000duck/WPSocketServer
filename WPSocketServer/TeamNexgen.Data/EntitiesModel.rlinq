@@ -14,17 +14,29 @@
         <orm:field name="_softwareId" property="SoftwareId" behavior="readwrite" uniqueId="233ce7b5-3fd1-4fff-bef4-8186b21c8375" type="System.Int32">
           <orm:column name="SoftwareId" sql-type="int" nullable="false" length="0" scale="0" primary-key="true" backend-calculated="true" ado-type="Int32" />
         </orm:field>
-        <orm:field name="_description" property="Description" behavior="readwrite" uniqueId="3fb1f459-47a8-4064-823a-1c5518b669b5" type="System.String">
-          <orm:column name="Description" sql-type="varchar" nullable="false" length="2056" scale="0" ado-type="StringVariableLength" />
-        </orm:field>
         <orm:field name="_name" property="Name" behavior="readwrite" uniqueId="c4c7977d-3d58-4519-bcb8-c9a25fb3fe61" type="System.String">
           <orm:column name="Name" sql-type="varchar" nullable="false" length="512" scale="0" ado-type="StringVariableLength" />
         </orm:field>
-        <orm:field name="_isActive" property="IsActive" behavior="readwrite" uniqueId="59550a3b-34fe-4501-92f7-6e278c985ae0" type="System.Byte">
-          <orm:column name="IsActive" sql-type="tinyint" nullable="false" length="0" scale="0" ado-type="Byte" />
+        <orm:field name="_isActive" property="IsActive" behavior="readwrite" uniqueId="59550a3b-34fe-4501-92f7-6e278c985ae0" type="System.Boolean">
+          <orm:column name="IsActive" sql-type="bit" nullable="false" length="0" scale="0" ado-type="Bit" />
         </orm:field>
         <orm:field name="_url" property="Url" behavior="readwrite" uniqueId="9f93220e-e5e7-4d12-a474-3074f1e5f556" type="System.String">
           <orm:column name="Url" sql-type="varchar" nullable="false" length="512" scale="0" ado-type="StringVariableLength" />
+        </orm:field>
+        <orm:field name="_version" property="Version" behavior="readwrite" uniqueId="97dd0403-5525-4a8b-a954-1a298f705bbf" type="System.String">
+          <orm:column name="Version" sql-type="varchar" nullable="false" length="128" scale="0" ado-type="StringVariableLength" />
+        </orm:field>
+        <orm:field name="_timestamp" property="Timestamp" behavior="readwrite" uniqueId="8d2f05ec-98fb-46c9-a4f6-054d0083e1d3" type="System.DateTime">
+          <orm:column name="Timestamp" sql-type="datetime" nullable="false" length="0" scale="0" ado-type="DateTime" />
+        </orm:field>
+        <orm:field name="_seoUrl" property="SeoUrl" behavior="readwrite" uniqueId="808d8ab6-7053-4a50-9a23-c8c46d58b31a" type="System.String">
+          <orm:column name="SeoUrl" sql-type="varchar" nullable="false" length="128" scale="0" ado-type="StringVariableLength" />
+        </orm:field>
+        <orm:field name="_authorName" property="AuthorName" behavior="readwrite" uniqueId="138e026f-b944-46b2-bf22-d8230b9890a0" type="System.String">
+          <orm:column name="AuthorName" sql-type="varchar" nullable="false" length="128" scale="0" ado-type="StringVariableLength" />
+        </orm:field>
+        <orm:field name="_authorEmail" property="AuthorEmail" behavior="readwrite" uniqueId="c98fbb0a-d923-47d0-8676-ae2380f50856" type="System.String">
+          <orm:column name="AuthorEmail" sql-type="varchar" nullable="false" length="128" scale="0" ado-type="StringVariableLength" />
         </orm:field>
       </orm:class>
       <orm:class name="User" uniqueId="824684ef-a760-4af9-8b41-c10a0c17c55a">
@@ -59,6 +71,12 @@
         </orm:field>
         <orm:field name="_nickname" property="Nickname" behavior="readwrite" uniqueId="6429d426-17cd-4ff5-8cf2-b8764e386f02" type="System.String">
           <orm:column name="Nickname" sql-type="varchar" nullable="false" length="64" scale="0" ado-type="StringVariableLength" />
+        </orm:field>
+        <orm:field name="_emailVerified" property="EmailVerified" behavior="readwrite" uniqueId="4dacfaef-e597-420e-a39f-f3e005cff9ae" type="System.Boolean">
+          <orm:column name="EmailVerified" sql-type="bit" nullable="false" length="0" scale="0" ado-type="Bit" />
+        </orm:field>
+        <orm:field name="_registrationGuid" property="RegistrationGuid" behavior="readwrite" uniqueId="32bd56e4-883d-4470-9c69-514fa53217d4" type="System.String">
+          <orm:column name="RegistrationGuid" sql-type="varchar" nullable="true" length="128" scale="0" ado-type="StringVariableLength" />
         </orm:field>
       </orm:class>
       <orm:class name="DataArrivalLog" uniqueId="f47cf855-db6a-44b4-bf09-9b20f08936b5">
@@ -113,8 +131,8 @@
         <orm:field name="_monitoring" property="Monitoring" behavior="readwrite" uniqueId="72671fbc-b6ab-4a66-8335-cc470fb9296b" type="System.Boolean">
           <orm:column name="Monitoring" sql-type="bit" nullable="false" length="0" scale="0" ado-type="Bit" />
         </orm:field>
-        <orm:field name="_serviceType" property="ServiceType" behavior="readwrite" uniqueId="463a4acd-6d99-425d-8fe2-d799706f99cf" type="System.Int32">
-          <orm:column name="ServiceType" sql-type="int" nullable="false" length="0" scale="0" ado-type="Int32" />
+        <orm:field name="_serviceTypeId" property="ServiceTypeId" behavior="readwrite" uniqueId="846d138a-a6c5-4292-97f0-a08f6ede0a95" type="System.Int32">
+          <orm:column name="ServiceTypeId" sql-type="int" nullable="false" length="0" scale="0" ado-type="Int32" />
         </orm:field>
       </orm:class>
       <orm:class name="SendData" uniqueId="7d323f20-7087-4f8c-9163-9085b83a89d1">
@@ -154,21 +172,25 @@
         <orm:field name="_description" property="Description" behavior="readwrite" uniqueId="e317ab5c-fbb4-46cf-b8e4-d34b5f539d6a" type="System.String">
           <orm:column name="Description" sql-type="varchar" nullable="false" length="128" scale="0" ado-type="StringVariableLength" />
         </orm:field>
-        <orm:field name="_isActive" property="IsActive" behavior="readwrite" uniqueId="72232fa6-0882-40e7-ac56-77aeca74edc6" type="System.Byte">
-          <orm:column name="IsActive" sql-type="tinyint" nullable="false" length="0" scale="0" ado-type="Byte" />
+        <orm:field name="_isActive" property="IsActive" behavior="readwrite" uniqueId="72232fa6-0882-40e7-ac56-77aeca74edc6" type="System.Boolean">
+          <orm:column name="IsActive" sql-type="bit" nullable="false" length="0" scale="0" ado-type="Bit" />
         </orm:field>
-        <orm:field name="_serviceType1" property="ServiceType1" behavior="readwrite" uniqueId="646382cc-01b5-4211-bbf6-5b4049391ef7" type="System.Int32">
-          <orm:column name="ServiceType" sql-type="int" nullable="false" length="0" scale="0" ado-type="Int32" />
+        <orm:field name="_serviceTypeEnumId" property="ServiceTypeEnumId" behavior="readwrite" uniqueId="28869815-868d-4965-8f14-9e7f5159a2d8" type="System.Int32">
+          <orm:column name="ServiceTypeEnumId" sql-type="int" nullable="false" length="0" scale="0" ado-type="Int32" />
         </orm:field>
       </orm:class>
     </orm:namespace>
     <orm:schema schema="">
       <orm:table name="Software">
         <orm:column name="SoftwareId" sql-type="int" nullable="false" length="0" scale="0" primary-key="true" backend-calculated="true" ado-type="Int32" />
-        <orm:column name="Description" sql-type="varchar" nullable="false" length="2056" scale="0" ado-type="StringVariableLength" />
         <orm:column name="Name" sql-type="varchar" nullable="false" length="512" scale="0" ado-type="StringVariableLength" />
-        <orm:column name="IsActive" sql-type="tinyint" nullable="false" length="0" scale="0" ado-type="Byte" />
+        <orm:column name="IsActive" sql-type="bit" nullable="false" length="0" scale="0" ado-type="Bit" />
         <orm:column name="Url" sql-type="varchar" nullable="false" length="512" scale="0" ado-type="StringVariableLength" />
+        <orm:column name="Version" sql-type="varchar" nullable="false" length="128" scale="0" ado-type="StringVariableLength" />
+        <orm:column name="Timestamp" sql-type="datetime" nullable="false" length="0" scale="0" ado-type="DateTime" />
+        <orm:column name="SeoUrl" sql-type="varchar" nullable="false" length="128" scale="0" ado-type="StringVariableLength" />
+        <orm:column name="AuthorName" sql-type="varchar" nullable="false" length="128" scale="0" ado-type="StringVariableLength" />
+        <orm:column name="AuthorEmail" sql-type="varchar" nullable="false" length="128" scale="0" ado-type="StringVariableLength" />
       </orm:table>
       <orm:table name="Users">
         <orm:column name="UserId" sql-type="int" nullable="false" length="0" scale="0" primary-key="true" backend-calculated="true" ado-type="Int32" />
@@ -179,6 +201,8 @@
         <orm:column name="IrcRealName" sql-type="varchar" nullable="false" length="64" scale="0" ado-type="StringVariableLength" />
         <orm:column name="IrcHostName" sql-type="varchar" nullable="false" length="64" scale="0" ado-type="StringVariableLength" />
         <orm:column name="Nickname" sql-type="varchar" nullable="false" length="64" scale="0" ado-type="StringVariableLength" />
+        <orm:column name="EmailVerified" sql-type="bit" nullable="false" length="0" scale="0" ado-type="Bit" />
+        <orm:column name="RegistrationGuid" sql-type="varchar" nullable="true" length="128" scale="0" ado-type="StringVariableLength" />
       </orm:table>
       <orm:table name="DataArrivalLog">
         <orm:column name="DataArrivalLogId" sql-type="int" nullable="false" length="0" scale="0" primary-key="true" backend-calculated="true" ado-type="Int32" />
@@ -194,7 +218,7 @@
         <orm:column name="Connected" sql-type="bit" nullable="false" length="0" scale="0" ado-type="Bit" />
         <orm:column name="Description" sql-type="varchar" nullable="false" length="128" scale="0" ado-type="StringVariableLength" />
         <orm:column name="Monitoring" sql-type="bit" nullable="false" length="0" scale="0" ado-type="Bit" />
-        <orm:column name="ServiceType" sql-type="int" nullable="false" length="0" scale="0" ado-type="Int32" />
+        <orm:column name="ServiceTypeId" sql-type="int" nullable="false" length="0" scale="0" ado-type="Int32" />
       </orm:table>
       <orm:table name="SendData">
         <orm:column name="SendDataId" sql-type="int" nullable="false" length="0" scale="0" primary-key="true" backend-calculated="true" ado-type="Int32" />
@@ -205,8 +229,8 @@
       <orm:table name="ServiceTypes">
         <orm:column name="ServiceTypeId" sql-type="int" nullable="false" length="0" scale="0" primary-key="true" backend-calculated="true" ado-type="Int32" />
         <orm:column name="Description" sql-type="varchar" nullable="false" length="128" scale="0" ado-type="StringVariableLength" />
-        <orm:column name="IsActive" sql-type="tinyint" nullable="false" length="0" scale="0" ado-type="Byte" />
-        <orm:column name="ServiceType" sql-type="int" nullable="false" length="0" scale="0" ado-type="Int32" />
+        <orm:column name="IsActive" sql-type="bit" nullable="false" length="0" scale="0" ado-type="Bit" />
+        <orm:column name="ServiceTypeEnumId" sql-type="int" nullable="false" length="0" scale="0" ado-type="Int32" />
       </orm:table>
     </orm:schema>
     <orm:relational-naming-settings>
@@ -216,7 +240,7 @@
   </orm:orm>
   <ModelSettings xmlns="">
     <AppConfigConnectionPropertyName>Connection</AppConfigConnectionPropertyName>
-    <AppConfigConnectionString>data source=team-nexgen.org;initial catalog=team-nexgen.org;persist security info=True;user id=team-nexgen.org;password=talaxian#1</AppConfigConnectionString>
+    <AppConfigConnectionString>data source=team-nexgen.org;initial catalog=team-nexgen.org;persist security info=True;user id=team-nexgen.org;password=thalosian#1</AppConfigConnectionString>
     <InitialCatalog>team-nexgen.org</InitialCatalog>
     <NamingSettings>
       <ClassRules>
@@ -246,10 +270,14 @@
   <Types>
     <DomainClass Id="e53f4f3d-62c0-4009-8fb1-8aa29c4ba065" name="Software" namespace="TeamNexgen.Data" showPropertiesCompartment="true" identityMechanism="DatabaseServerCalculated" concurrencyMode="Changed" showNavigationCompartment="true" showImplementationCompartment="true" identityMechanismMember="SoftwareId">
       <Property Id="233ce7b5-3fd1-4fff-bef4-8186b21c8375" name="SoftwareId" type="Int32" label="SoftwareId : Int32" kind="Persistent" identity="true" fieldName="_softwareId" />
-      <Property Id="3fb1f459-47a8-4064-823a-1c5518b669b5" name="Description" label="Description : String" kind="Persistent" fieldName="_description" />
-      <Property Id="59550a3b-34fe-4501-92f7-6e278c985ae0" name="IsActive" type="Byte" label="IsActive : Byte" kind="Persistent" fieldName="_isActive" />
+      <Property Id="59550a3b-34fe-4501-92f7-6e278c985ae0" name="IsActive" type="Boolean" label="IsActive : Boolean" kind="Persistent" fieldName="_isActive" />
       <Property Id="c4c7977d-3d58-4519-bcb8-c9a25fb3fe61" name="Name" label="Name : String" kind="Persistent" fieldName="_name" />
       <Property Id="9f93220e-e5e7-4d12-a474-3074f1e5f556" name="Url" label="Url : String" kind="Persistent" fieldName="_url" />
+      <Property Id="97dd0403-5525-4a8b-a954-1a298f705bbf" name="Version" label="Version : String" kind="Persistent" fieldName="_version" />
+      <Property Id="8d2f05ec-98fb-46c9-a4f6-054d0083e1d3" name="Timestamp" type="DateTime" label="Timestamp : DateTime" kind="Persistent" fieldName="_timestamp" />
+      <Property Id="808d8ab6-7053-4a50-9a23-c8c46d58b31a" name="SeoUrl" label="SeoUrl : String" kind="Persistent" fieldName="_seoUrl" />
+      <Property Id="138e026f-b944-46b2-bf22-d8230b9890a0" name="AuthorName" label="AuthorName : String" kind="Persistent" fieldName="_authorName" />
+      <Property Id="c98fbb0a-d923-47d0-8676-ae2380f50856" name="AuthorEmail" label="AuthorEmail : String" kind="Persistent" fieldName="_authorEmail" />
     </DomainClass>
     <DomainClass Id="824684ef-a760-4af9-8b41-c10a0c17c55a" name="User" namespace="TeamNexgen.Data" showPropertiesCompartment="true" identityMechanism="DatabaseServerCalculated" concurrencyMode="Changed" showNavigationCompartment="true" showImplementationCompartment="true" identityMechanismMember="UserId">
       <Property Id="d8ba44e6-1f04-451f-ba4c-f824b744fed6" name="UserId" type="Int32" label="UserId : Int32" kind="Persistent" identity="true" fieldName="_userId" />
@@ -260,6 +288,8 @@
       <Property Id="c5adbc77-e101-4b6a-8fe4-25fd0c6757ae" name="IrcRealName" label="IrcRealName : String" kind="Persistent" fieldName="_ircRealName" />
       <Property Id="72baf373-25ee-4105-a727-19f874bc08b5" name="IrcHostName" label="IrcHostName : String" kind="Persistent" fieldName="_ircHostName" />
       <Property Id="6429d426-17cd-4ff5-8cf2-b8764e386f02" name="Nickname" label="Nickname : String" kind="Persistent" fieldName="_nickname" />
+      <Property Id="4dacfaef-e597-420e-a39f-f3e005cff9ae" name="EmailVerified" type="Boolean" label="EmailVerified : Boolean" kind="Persistent" fieldName="_emailVerified" />
+      <Property Id="32bd56e4-883d-4470-9c69-514fa53217d4" name="RegistrationGuid" label="RegistrationGuid : String" kind="Persistent" fieldName="_registrationGuid" />
     </DomainClass>
     <DomainClass Id="f47cf855-db6a-44b4-bf09-9b20f08936b5" name="DataArrivalLog" namespace="TeamNexgen.Data" showPropertiesCompartment="true" identityMechanism="DatabaseServerCalculated" concurrencyMode="Changed" showNavigationCompartment="true" showImplementationCompartment="true" identityMechanismMember="DataArrivalLogId">
       <Property Id="ede72a63-c06d-4c9c-b1b4-7b92bcd47c5d" name="DataArrivalLogId" type="Int32" label="DataArrivalLogId : Int32" kind="Persistent" identity="true" fieldName="_dataArrivalLogId" />
@@ -275,7 +305,7 @@
       <Property Id="766aa89b-291a-4ace-bae2-0f9be2f71947" name="Connected" type="Boolean" label="Connected : Boolean" kind="Persistent" fieldName="_connected" />
       <Property Id="48b96044-9847-411f-bd82-f62e794a59af" name="Description" label="Description : String" kind="Persistent" fieldName="_description" />
       <Property Id="72671fbc-b6ab-4a66-8335-cc470fb9296b" name="Monitoring" type="Boolean" label="Monitoring : Boolean" kind="Persistent" fieldName="_monitoring" />
-      <Property Id="463a4acd-6d99-425d-8fe2-d799706f99cf" name="ServiceType" type="Int32" label="ServiceType : Int32" kind="Persistent" fieldName="_serviceType" />
+      <Property Id="846d138a-a6c5-4292-97f0-a08f6ede0a95" name="ServiceTypeId" type="Int32" label="ServiceTypeId : Int32" kind="Persistent" fieldName="_serviceTypeId" />
     </DomainClass>
     <DomainClass Id="7d323f20-7087-4f8c-9163-9085b83a89d1" name="SendData" namespace="TeamNexgen.Data" showPropertiesCompartment="true" identityMechanism="DatabaseServerCalculated" concurrencyMode="Changed" showNavigationCompartment="true" showImplementationCompartment="true" identityMechanismMember="SendDataId">
       <Property Id="b82392cd-bf54-47ef-a6e2-49cd048f52f9" name="SendDataId" type="Int32" label="SendDataId : Int32" kind="Persistent" identity="true" fieldName="_sendDataId" />
@@ -286,8 +316,8 @@
     <DomainClass Id="8f0eaf2a-cd04-450f-96a2-289622126573" name="ServiceType" namespace="TeamNexgen.Data" showPropertiesCompartment="true" identityMechanism="DatabaseServerCalculated" concurrencyMode="Changed" showNavigationCompartment="true" showImplementationCompartment="true" identityMechanismMember="ServiceTypeId">
       <Property Id="572eb466-3000-489a-b2f1-be79a44414db" name="ServiceTypeId" type="Int32" label="ServiceTypeId : Int32" kind="Persistent" identity="true" fieldName="_serviceTypeId" />
       <Property Id="e317ab5c-fbb4-46cf-b8e4-d34b5f539d6a" name="Description" label="Description : String" kind="Persistent" fieldName="_description" />
-      <Property Id="72232fa6-0882-40e7-ac56-77aeca74edc6" name="IsActive" type="Byte" label="IsActive : Byte" kind="Persistent" fieldName="_isActive" />
-      <Property Id="646382cc-01b5-4211-bbf6-5b4049391ef7" name="ServiceType1" type="Int32" label="ServiceType1 : Int32" kind="Persistent" fieldName="_serviceType1" />
+      <Property Id="72232fa6-0882-40e7-ac56-77aeca74edc6" name="IsActive" type="Boolean" label="IsActive : Boolean" kind="Persistent" fieldName="_isActive" />
+      <Property Id="28869815-868d-4965-8f14-9e7f5159a2d8" name="ServiceTypeEnumId" type="Int32" label="ServiceTypeEnumId : Int32" kind="Persistent" fieldName="_serviceTypeEnumId" />
     </DomainClass>
   </Types>
   <domainContext>

@@ -31,6 +31,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -50,11 +51,14 @@
     <Compile Include="Enums\ServiceType.cs" />
     <Compile Include="Helpers\ConnectionsHelper.cs" />
     <Compile Include="Helpers\DataArriveLogHelper.cs" />
+    <Compile Include="Helpers\EmailHelper.cs" />
     <Compile Include="Helpers\SendDataHelper.cs" />
+    <Compile Include="Helpers\ServiceTypeHelper.cs" />
     <Compile Include="Helpers\UsersHelper.cs" />
     <Compile Include="Models\ConnectionModel.cs" />
     <Compile Include="Models\DataArrivalLogModel.cs" />
     <Compile Include="Models\SendDataModel.cs" />
+    <Compile Include="Models\ServiceTypeModel.cs" />
     <Compile Include="Objects\GlobalObjects.cs" />
     <Compile Include="Objects\UserObject.cs" />
     <Compile Include="Models\UserModel.cs" />
@@ -65,6 +69,7 @@
     <Compile Include="Repositories\ConnectionsRepository.cs" />
     <Compile Include="Repositories\DataArrivalLogRepository.cs" />
     <Compile Include="Repositories\SendDataRepository.cs" />
+    <Compile Include="Repositories\ServiceTypeRepository.cs" />
     <Compile Include="Repositories\UserRepository.cs" />
   </ItemGroup>
   <ItemGroup>

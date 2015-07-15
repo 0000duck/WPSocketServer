@@ -24,7 +24,7 @@ namespace WPSocketServer.Business.Repositories {
                             Connected = item.Connected,
                             Description = item.Description,
                             Monitoring = item.Monitoring,
-                            ServiceType = item.ServiceType
+                            ServiceTypeId = item.ServiceTypeId
                         });
                     }
                     return result;
@@ -48,7 +48,7 @@ namespace WPSocketServer.Business.Repositories {
                     connection.Connected = model.Connected;
                     connection.Description = model.Description;
                     connection.Monitoring = model.Monitoring;
-                    connection.ServiceType = model.ServiceType;
+                    connection.ServiceTypeId = model.ServiceTypeId;
                     e.Add(connection);
                     e.SaveChanges();
                     return connection.ConnectionId;
@@ -73,7 +73,7 @@ namespace WPSocketServer.Business.Repositories {
                         connection.Server = model.Server;
                         connection.UserId = model.UserId;
                         connection.Monitoring = model.Monitoring;
-                        connection.ServiceType = model.ServiceType;
+                        connection.ServiceTypeId = model.ServiceTypeId;
                         e.SaveChanges();
                         return true;
                     } else {

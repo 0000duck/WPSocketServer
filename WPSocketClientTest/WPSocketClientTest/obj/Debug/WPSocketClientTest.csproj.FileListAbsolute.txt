@@ -9,3 +9,14 @@ C:\dev\WPSocketClientTest\WPSocketClientTest\obj\Debug\WPSocketClientTest.Proper
 C:\dev\WPSocketClientTest\WPSocketClientTest\obj\Debug\WPSocketClientTest.csproj.GenerateResource.Cache
 C:\dev\WPSocketClientTest\WPSocketClientTest\obj\Debug\WPSocketClientTest.exe
 C:\dev\WPSocketClientTest\WPSocketClientTest\obj\Debug\WPSocketClientTest.pdb
+C:\dev\WPSocketServer\WPSocketClientTest\WPSocketClientTest\bin\Debug\WPSocketClientTest.exe.config
+C:\dev\WPSocketServer\WPSocketClientTest\WPSocketClientTest\obj\Debug\WPSocketClientTest.exe
+C:\dev\WPSocketServer\WPSocketClientTest\WPSocketClientTest\obj\Debug\WPSocketClientTest.pdb
+C:\dev\WPSocketServer\WPSocketClientTest\WPSocketClientTest\bin\Debug\WPSocketClientTest.exe
+C:\dev\WPSocketServer\WPSocketClientTest\WPSocketClientTest\bin\Debug\WPSocketClientTest.pdb
+C:\dev\WPSocketServer\WPSocketClientTest\WPSocketClientTest\bin\Debug\WPSocket.dll
+C:\dev\WPSocketServer\WPSocketClientTest\WPSocketClientTest\bin\Debug\WPSocket.pdb
+C:\dev\WPSocketServer\WPSocketClientTest\WPSocketClientTest\obj\Debug\WPSocketClientTest.csprojResolveAssemblyReference.cache
+C:\dev\WPSocketServer\WPSocketClientTest\WPSocketClientTest\obj\Debug\WPSocketClientTest.Form1.resources
+C:\dev\WPSocketServer\WPSocketClientTest\WPSocketClientTest\obj\Debug\WPSocketClientTest.Properties.Resources.resources
+C:\dev\WPSocketServer\WPSocketClientTest\WPSocketClientTest\obj\Debug\WPSocketClientTest.csproj.GenerateResource.Cache

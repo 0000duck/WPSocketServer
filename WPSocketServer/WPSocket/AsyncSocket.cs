@@ -182,16 +182,6 @@ namespace WPSocket {
                 }
             }
         }
-        public string ReturnLocalIp() {
-            try {
-                return new WebClient().DownloadString("http://www.whatismyip.com/automation/n09230945.asp");
-            } catch (Exception ex) {
-                if (SocketError != null) {
-                    SocketError(ex);
-                }
-                return "";
-            }
-        }
         public long ReturnLocalPort() {
             try {
                 return Convert.ToInt64(((IPEndPoint)_tempSocket.LocalEndPoint).Port);

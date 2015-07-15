@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using WPSocketServer.Business.Enums;
-namespace WPSocketServer.Business.Models {
+﻿namespace WPSocketServer.Business.Models {
     /// <summary>
     /// Connection Model
     /// </summary>
@@ -12,7 +6,7 @@ namespace WPSocketServer.Business.Models {
         /// <summary>
         /// Service Type
         /// </summary>
-        public int ServiceType { get; set; }
+        public int ServiceTypeId { get; set; }
         /// <summary>
         /// ConnectionId
         /// </summary>
