@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Linq;
 using TeamNexgen.Data;
+using WPSocketServer.Business.Helpers;
 using WPSocketServer.Business.Models;
 namespace WPSocketServer.Business.Repositories {
     public class UserRepository {
@@ -60,7 +61,7 @@ namespace WPSocketServer.Business.Repositories {
                     if (e.Users.Where(u => u.EmailAddress == emailAddress).Count() == 0) {
                         var user = new User();
                         user.EmailAddress = emailAddress;
-                        user.Password = password;
+                        user.Password = Crypto.EncryptStringAES(password, ;
                         user.EmailVerified = false;
                         user.IrcHostName = "";
                         user.IrcRealName = "";

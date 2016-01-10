@@ -1,6 +1,7 @@
 ﻿// teamnexgen.ddns.net
 using System;
 using System.Windows.Forms;
+using System.Xml.Linq;
 using WPSocketServer.Business.Objects;
 namespace WPSocketServer {
     public partial class frmMain : Form {

@@ -50,6 +50,7 @@
   <ItemGroup>
     <Compile Include="Enums\ServiceType.cs" />
     <Compile Include="Helpers\ConnectionsHelper.cs" />
+    <Compile Include="Helpers\Crypto.cs" />
     <Compile Include="Helpers\DataArriveLogHelper.cs" />
     <Compile Include="Helpers\EmailHelper.cs" />
     <Compile Include="Helpers\SendDataHelper.cs" />

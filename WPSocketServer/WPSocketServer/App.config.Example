@@ -1,11 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <configuration>
   <connectionStrings>
-    <add name="Connection" connectionString="data source=team-nexgen.org;initial catalog=team-nexgen.org;persist security info=True;user id=team-nexgen.org;password=thalosian#1" providerName="System.Data.SqlClient" />
+    <add name="Connection" connectionString="data source=team-nexgen.org;initial catalog=team-nexgen.org;persist security info=True;user id=team-nexgen.org;password=password" providerName="System.Data.SqlClient" />
   </connectionStrings>
   <appSettings>
     <add key="FromEmail" value="guidex@team-nexgen.org" />
-    <add key="FromEmailPassword" value="thalosian#1"/>
+    <add key="FromEmailPassword" value="talaxian#1"/>
     <add key="SmtpServer" value="smtp.team-nexgen.org" />
   </appSettings>
   <startup>
